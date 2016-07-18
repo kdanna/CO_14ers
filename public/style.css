@@ -3,22 +3,27 @@ body {
   background-image: url("cork-wallet.png")
 }
 
+
+
 .navbar {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+.container {
+	/*padding: 3rem 1.5rem;*/
+	text-align: center;
+	font-family:  Helvetica;
+	min-height: 20rem;
+	max-height: 80rem;
 }
 
 #title {
-	font-family:  Helvetica;
   	font-weight: bold;
-  	font-size: 4em;
+  	font-size: 4rem;
+  	margin-bottom: 0rem
 }
 
-#map {
-	 border: 5px solid red;
-	 height: 500px;
+#map-container {
+	 border: .5rem solid black;
+	 height: 80rem;
 }
