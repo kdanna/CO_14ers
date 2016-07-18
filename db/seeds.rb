@@ -1,6 +1,8 @@
-peak_data = [
+require_relative '../models/mountain'
 
-{
+Mountain.destroy_all
+Mountain.create (
+[{
 	peak_name: "Mt. Elbert",
 	range: "Sawatch Range",
 	elevation: "14433",
@@ -466,4 +468,4 @@ peak_data = [
 	longitude: "-107.42500000000001"
 }
 
-]
+])

@@ -1,5 +1,5 @@
 body {
-  padding-top: 5rem;
+  padding-top: 3rem;
   background-image: url("cork-wallet.png")
 }
 
@@ -13,7 +13,7 @@ body {
 	/*padding: 3rem 1.5rem;*/
 	text-align: center;
 	font-family:  Helvetica;
-	min-height: 20rem;
+	min-height: 10rem;
 	max-height: 80rem;
 }
 
@@ -26,4 +26,8 @@ body {
 #map-container {
 	 border: .5rem solid black;
 	 height: 80rem;
+}
+
+#append-info {
+	background-color:gray;
 }

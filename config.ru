@@ -3,7 +3,7 @@ require 'bundler'
 Bundler.require
 
 # #Models
-#  require './models/mountain'
+require './models/mountain'
 
 #Controllers
 require './app'

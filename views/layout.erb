@@ -15,33 +15,42 @@
   </head>
 
   <body>
-
+        
         <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
           <ul class="nav navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Peak Info</a>
+              <a class="nav-link" href="/peaks">Peak Search</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Add/Update Peaks</a>
+              <a class="nav-link" href="/trail_notes">Trail Notes</a>
             </li>
           </ul>
         </nav>
-  
+       
+
         <div class="container col-lg-12 col-md-4">
             <div class="row">
-                <h1 id="title">COLORADO 14ers</h1>
+                <p id="title">COLORADO 14ers</p>
                 <p class="lead"> peak finder</p>
+            </div>
+        </div>
+
+        <div class="container col-lg-10 col-lg-offset-1 col-md-4">
+            <div class="row">
+              <div id="map-container"></div>
             </div>
         </div>
 
         <div class="container col-lg-12 col-md-4">
             <div class="row">
-              <div id="map-container"></div>
+             <main id="append-info">
+             </main>
             </div>
-        </div><!-- /.container -->
+        </div>
+        <!-- /.container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
