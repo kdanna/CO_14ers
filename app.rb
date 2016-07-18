@@ -1,9 +1,9 @@
 class Project < Sinatra::Base
 
 require 'json'
-  # General route actions
+  # landing page
   get '/' do
-    erb :home
+    erb :layout
   end
 
 
