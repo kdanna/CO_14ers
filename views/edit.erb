@@ -1,20 +1,33 @@
 
 <div class=col-lg-10 col-md-4>
-  <form>
+  <form action="/mounatins" method="post">
+
     <fieldset class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="formGroupInput" placeholder="name">
+      <label for="peak_name">Peak Name</label>
+      <input type="text" class="form-control" id="formGroupInput" placeholder="peak name">
     </fieldset>
 
     <fieldset class="form-group">
-      <label for="mountain">Mountain name</label>
-      <input type="text" class="form-control" id="formGroupInput" placeholder="enter mountain name">
+      <label for="mountain_range">Mountain Range</label>
+      <input type="text" class="form-control" id="formGroupInput" placeholder="enter mountain range">
     </fieldset>
 
     <fieldset class="form-group">
-      <label for="comment">Leave trail notes / updates for fellow hikers</label>
-      <textarea class="form-control" id="leave-comment" rows="5"></textarea>
+      <label for="difficulty">Difficulty</label>
+      <input type="text" class="form-control" id="formGroupInput" placeholder="rank difficulty 1 - 10, 10 being hardest">
     </fieldset>
+
+    <fieldset class="form-group">
+      <label for="distance">Distance</label>
+      <input type="text" class="form-control" id="formGroupInput" placeholder="round-trip distance in miles">
+    </fieldset>
+
+
+    <fieldset class="form-group">
+      <label for="elevation">Peak Elevation</label>
+      <input type="text" class="form-control" id="formGroupInput" placeholder="peak elevation in feet">
+    </fieldset>
+
 
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
