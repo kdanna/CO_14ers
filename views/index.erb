@@ -1,0 +1,20 @@
+<div class="render_mountains">
+	<ul>
+        <% @mountains.each do |mountain| %>
+            <li><%= mountain[:peak_name] %></li>
+			<li><%= mountain[:range] %></li>
+			<li><%= mountain[:elevation] %> feet</li>
+			<li><%= mountain[:peak_name] %></li>
+			<li><%= mountain[:peak_name] %></li>
+			<li> lat: <%=mountain[:latitude]%> lng: <%=mountain[:longitude]%> </li>
+			 
+          		<form>
+            		<button>Add Trail Note</button>
+          		</form>
+   			<br>
+        <% end %>
+    </ul>
+
+</div>
+
+
