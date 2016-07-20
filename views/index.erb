@@ -1,7 +1,7 @@
 <div class="render_mountains">
 	<ul>
-        <% @mountains.each do |mountain| %>
-            <li>Peak Name: <%= mountain[:peak_name] %></li>
+    <% @mountains.each do |mountain| %>
+      <li>Peak Name: <%= mountain[:peak_name] %></li>
 			<li>Mountain Range: <%= mountain[:range] %></li>
 			<li>Elevation: <%= mountain[:elevation] %> feet</li>
 			<li>Avereage Hike Time: <%= mountain[:ave_hike_time] %></li>
@@ -14,14 +14,12 @@
   			</form>
 
   		<form method="get" action="/peaks/<%= mountain.id%>/edit">
-    		
    			 <input type="submit" value="edit"></input>
   		</form>
    	
 			</br>
-        <%end%>
-    </ul>
-
+     <%end%>
+  </ul>
 </div>
 
 

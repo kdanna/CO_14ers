@@ -1,4 +1,4 @@
-<div class=col-lg-10 col-md-4>
+<div class=col-lg-10  col-md-4>
   <form action='/peaks/<%= "#{@mountain.id}"%>' method="post">
   <input name="_method" type="hidden" value="PUT" /> 
   
@@ -21,10 +21,10 @@
   <input name="mountain[distance]">
 
   <label for="mountain[latitude]">Latitude:</label>
-  <input name="mountain[latitude]">
+  <input type="number" name="mountain[latitude]">
 
   <label for="mountain[longitude]">Longitude:</label>
-  <input name="mountain[longitude]">
+  <input type="number" name="mountain[longitude]">
 
   <input type="submit" value="Update">
 

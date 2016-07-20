@@ -1,13 +1,13 @@
 body {
   padding-top: 0rem;
-  background-image: url("cork-wallet.png")
+  background-color: white;
+  font-size: 1.5rem;
 }
 
-.navbar-default{
+.navbar {
 	font-size: 2rem;
-	background-color: black;
-	color: white;
 	padding-top: -5rem;
+	color: #5BB4B1;
 }
 
 .container {
@@ -27,9 +27,5 @@ body {
 #map-container {
 	height: 80rem;
 	margin-top: -2rem;
-
 }
 
-#append-info {
-	background-color:gray;
-}

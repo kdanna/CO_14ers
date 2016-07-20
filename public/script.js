@@ -13,15 +13,14 @@ $(document).on("ready", function() {
       $.get('/api', function(all_mountains){
         var mountains = JSON.parse(all_mountains);
         console.log(mountains);
-        // for(var i = 0; i < mountains.length; i++){
+        for(var i = 0; i < mountains.length; i++){
 
-        //     var marker = new google.maps.Marker({
-        //     map: map,
-        //     position: {lat: parseFloat(mountains[i].latitude), lan: parseFloat(mountains[i].longitude)}
-        //     // position: {lat: mountains[i].latitude, lan: mountains[i].longitude}
-        //     });
-      
-        // } 
+            var marker = new google.maps.Marker({
+            map: map,
+            position: {lat: parseFloat(mountains[i].latitude), lng: parseFloat(mountains[i].longitude)}
+            
+            });          
+        } 
       });
   }
 
