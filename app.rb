@@ -54,22 +54,19 @@ require 'json'
     	redirect('/peaks')
 	end
 
- # #UPDATE
- # 	get '/peaks/:id/edit' do
- # 		@mountain = Mountain.find(params[:id])
- # 		erb :edit
- # 	end
+ #UPDATE
+ 	get '/peaks/:id/edit' do
+ 		@mountain = Mountain.find(params[:id])
+ 		erb :edit
  	
- # 	put '/peaks/:id' do
- # 		@mountain = Mountain.find(params[:id])
- # 		if @mountain.update_attributes(params)
-
- # 	end
-
-
-
-
-
-
+ 	end
+ 	
+ 	put '/peaks/:id' do
+ 		@mountain = Mountain.find(params[:id])
+ 		if @mountain.update_attributes(params[:mountain])
+ 		 redirect to('/peaks')
+ 		end
+ 	
+ 	end
 
 end 

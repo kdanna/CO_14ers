@@ -1,0 +1,32 @@
+<div class=col-lg-10 col-md-4>
+  <form action='/peaks/<%= "#{@mountain.id}"%>' method="post">
+  <input name="_method" type="hidden" value="PUT" /> 
+  
+  <label for="mountain[peak_name]">Peak Name:</label>
+  <input name="mountain[peak_name]">
+
+  <label for="mountain[range]">Mountain Range:</label>
+  <input name="mountain[range]">
+
+  <label for="mountain[elevation]">Elevation:</label>
+  <input name="mountain[elevation]">
+
+  <label for="mountain[ave_hike_time]">Average Hike Time:</label>
+  <input name="mountain[elevation]">
+
+  <label for="mountain[difficulty]">Average Hike Time:</label>
+  <input name="mountain[difficulty]">
+
+  <label for="mountain[distance]">Round-trip Milage:</label>
+  <input name="mountain[distance]">
+
+  <label for="mountain[latitude]">Latitude:</label>
+  <input name="mountain[latitude]">
+
+  <label for="mountain[longitude]">Longitude:</label>
+  <input name="mountain[longitude]">
+
+  <input type="submit" value="Update">
+
+  </form>
+</div>
