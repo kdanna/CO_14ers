@@ -7,9 +7,13 @@
 			<li>Avereage Hike Time: <%= mountain[:ave_hike_time] %></li>
 			<li>Difficulty: <%= mountain[:difficulty] %></li>
 			<li>Distance: <%= mountain[:distance] %></li>
-
-
-   			<br>
+			
+			<form method="post" action="/peaks/<%= mountain.id %>">  
+    			<input name="_method" value="DELETE" type="hidden"/>
+   			 <button>Delete</button>
+  			</form>
+   	
+			</br>
         <% end %>
     </ul>
 

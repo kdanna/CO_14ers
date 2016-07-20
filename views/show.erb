@@ -1,9 +1,10 @@
-<div class="render_1_mountain">
-
-<p><%= @mountain[:peak_name] %></p>
-<p><%= @mountain[:range] %></p>
-<p><%= @mountain[:elevation] %> feet</p>
-<p> lat: <%=@mountain[:latitude]%> lng: <%=@mountain[:longitude]%> </p>
-
+<div class="render_1_@mountain">
+    <p>Peak Name: <%= @mountain[:peak_name] %></p>
+	<p>Mountain Range: <%= @mountain[:range] %></p>
+	<p>Elevation: <%= @mountain[:elevation] %> feet</p>
+	<p>Avereage Hike Time: <%= @mountain[:ave_hike_time] %></p>
+	<p>Difficulty: <%= @mountain[:difficulty] %></p>
+	<p>Distance: <%= @mountain[:distance] %></p>
+	<p>lat: <%=@mountain[:latitude]%> lng: <%=@mountain[:longitude]%> </p>
 </div>
 

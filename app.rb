@@ -5,33 +5,71 @@ set :method_override, true
 require 'json'
   
   # landing page
-  get '/' do
-    erb :layout
-  end
+ 	get '/' do
+    	erb :home
+  	end
+
+  #get map route
+ 	get '/map' do
+		erb :map
+ 	end
+
+ 	get '/api'  do
+ 		@mountains = Mountain.all.to_json
+ 	end
 
  #RESTful controller actions for mountains
- 
- #index - get all mountains
- get '/peaks' do
- 	# erb :index
- 	"does this index route work"
- end
 
- #show one mountain
- get '/peaks/:id' do
+ #WORKS - INDEX - get all peaks
+	 get '/peaks' do
+ 		@mountains = Mountain.all
+ 		erb :index
+ 	end
+
+ #WORKS - SHOW - one mountain
+ 	get '/peaks/:id' do
+ 		@mountain = Mountain.find(params[:id])
+ 		erb :show
+	end
+
+ #WORKS - CREATE - directs to form to make the new peak record
+ 	get '/add_peak' do
+ 		@mountain = Mountain.new
+ 		erb :new
+ 	end
+
+ 	post '/add_peak/new' do	
+ 		p params[:mountain]
+ 		mountain = params[:mountain]
+ 		p mountain
+	  	new_mnt = Mountain.create(params[:mountain])
+	  	p new_mnt
+	    redirect to('/peaks')
+	end	
+
+ #WORKS - DELETE - destroy entry
+   delete '/peaks/:id' do
+    	@mountain = Mountain.find(params[:id])
+    	@mountain.destroy
+    	redirect('/peaks')
+	end
+
+ # #UPDATE
+ # 	get '/peaks/:id/edit' do
+ # 		@mountain = Mountain.find(params[:id])
+ # 		erb :edit
+ # 	end
+ 	
+ # 	put '/peaks/:id' do
+ # 		@mountain = Mountain.find(params[:id])
+ # 		if @mountain.update_attributes(params)
+
+ # 	end
 
 
- end
-
- #new/post- add trail note
- get '/trail_notes' do
- 	'does this path work?'
- end
-
- #edit - update trail note
 
 
- #delete - delete trail note
+
 
 
 end 
