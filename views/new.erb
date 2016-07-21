@@ -1,32 +1,70 @@
 
-<div class=col-lg-10 col-md-4>
-  <form action="/add_peak/new" method="post">
+<div class="container new_form">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <form class="form-horizontal" action="/add_peak/new" method="post">
   
-  <label for="mountain[peak_name]">Peak Name:</label>
-  <input name="mountain[peak_name]">
+  <div class="form-group">
+      <label class="col-sm-3 control-label" for="mountain[peak_name]">Peak Name:</label>
+    <div class="col-sm-6">
+      <input type="text"class="form-control" name="mountain[peak_name]">
+    </div>
+  </div>
 
-  <label for="mountain[range]">Mountain Range:</label>
-  <input name="mountain[range]">
+  <div class="form-group">
+      <label class="col-sm-3 control-label" for="mountain[range]">Mountain Range:</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" name="mountain[range]">
+    </div>
+  </div>
 
-  <label for="mountain[elevation]">Elevation:</label>
-  <input name="mountain[elevation]">
+  <div class="form-group">
+      <label class="col-sm-3 control-label" for="mountain[elevation]">Elevation:</label>
+    <div class="col-sm-2">
+      <input type="number" class="form-control" name="mountain[elevation]">
+    </div>
+  </div>
 
-  <label for="mountain[ave_hike_time]">Average Hike Time:</label>
-  <input name="mountain[elevation]">
+  <div class="form-group">
+      <label class="col-sm-3 control-label" for="mountain[ave_hike_time]">Average Hike Time:</label>
+    <div class="col-sm-2">
+      <input type="number" class="form-control" name="mountain[elevation]">
+    </div>
+  </div>  
 
-  <label for="mountain[difficulty]">Average Hike Time:</label>
-  <input name="mountain[difficulty]">
+  <div class="form-group">
+      <label class="col-sm-3 control-label" for="mountain[difficulty]">Difficulty:</label>
+    <div class="col-sm-2">
+      <input type="number" class="form-control" name="mountain[difficulty]" placeholder= "1 through 10">
+    </div>
+  </div>  
 
-  <label for="mountain[distance]">Round-trip Milage:</label>
-  <input name="mountain[distance]">
+   <div class="form-group">
+      <label class="col-sm-3 control-label" for="mountain[distance]">Round-trip Milage:</label>
+    <div class="col-sm-2">
+      <input type="number"class="form-control" name="mountain[distance]">
+    </div>
+  </div>  
 
-  <label for="mountain[latitude]">Latitude:</label>
-  <input name="mountain[latitude]">
+  <div class="form-group">
+      <label class="col-sm-3 control-label" for="mountain[latitude]">Latitude:</label>
+    <div class="col-sm-2">
+      <input type="number" class="form-control" name="mountain[latitude]">
+    </div>
+  </div> 
 
-  <label for="mountain[longitude]">Longitude:</label>
-  <input name="mountain[longitude]">
-
-  <input type="submit" value="Create">
+  <div class="form-group"> 
+     <label class="col-sm-3 control-label" for="mountain[longitude]">Longitude:</label>
+    <div class="col-sm-2">
+      <input type="number" class="form-control" name="mountain[longitude]">
+    </div>
+  </div> 
+  
+  <div class="col-sm-3 text-center">
+    <input class="btn btn-default" type="submit" value="Submit" value="Create">
+  </div>
 
   </form>
+    </div>
+  </div>
 </div>

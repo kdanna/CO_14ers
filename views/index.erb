@@ -1,12 +1,13 @@
-<div class="render_mountains">
-	<ul>
+
+<div class="container-fluid render_mountains">
+    <div class="row">
     <% @mountains.each do |mountain| %>
-      <li>Peak Name: <%= mountain[:peak_name] %></li>
-			<li>Mountain Range: <%= mountain[:range] %></li>
-			<li>Elevation: <%= mountain[:elevation] %> feet</li>
-			<li>Avereage Hike Time: <%= mountain[:ave_hike_time] %></li>
-			<li>Difficulty: <%= mountain[:difficulty] %></li>
-			<li>Distance: <%= mountain[:distance] %></li>
+      <p>Peak Name: <%= mountain[:peak_name] %></p>
+			<p>Mountain Range: <%= mountain[:range] %></p>
+			<p>Elevation: <%= mountain[:elevation] %> feet</p>
+			<p>Avereage Hike Time: <%= mountain[:ave_hike_time] %></p>
+			<p>Difficulty: <%= mountain[:difficulty] %></p>
+			<p>Distance: <%= mountain[:distance] %></p>
 			
 			<form method="post" action="/peaks/<%= mountain.id %>">  
     			<input name="_method" value="DELETE" type="hidden"/>
@@ -19,7 +20,7 @@
    	
 			</br>
      <%end%>
-  </ul>
+    </div>
 </div>
 
 

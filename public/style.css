@@ -1,31 +1,49 @@
 body {
   padding-top: 0rem;
-  background-color: white;
   font-size: 1.5rem;
+  background-color: #d3d3d3;
+}
+
+.hero{
+	background-size: cover;
+	background-image: url('mountVector.png');
+	height: 100vh;	
+	margin-top: .5rem;
+	background-color: #222;
 }
 
 .navbar {
 	font-size: 2rem;
 	padding-top: -5rem;
 	color: #5BB4B1;
+	margin-bottom: 0;
 }
 
-.container {
-	/*padding: 3rem 1.5rem;*/
+.title{
+  	font: 4rem sans-serif; 
+ 	color: #337ab7;
+  	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-top: 10rem;
+	padding-left: 10rem;
 	text-align: center;
-	font-family:  Helvetica;
-	min-height: 10rem;
-	max-height: 100vh;
+	border-radius: 2px;
+	display: inline-block;
 }
 
-#title {
-  	font-weight: bold;
-  	font-size: 4rem;
-  	margin-bottom: 0rem
+.new_form{
+	padding-top: 5rem;
+
 }
+
 
 #map-container {
-	height: 80rem;
-	margin-top: -2rem;
+	top: 0;
+	bottom: 0;
+	/*height: 800px;
+	width: 100%;*/
+	height:100vh;
+	border-color: #222
 }
+
 
