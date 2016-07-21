@@ -10,17 +10,27 @@ $(document).on("ready", function() {
       });
 
       map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
+      
 
       $.get('/api', function(all_mountains){
         var mountains = JSON.parse(all_mountains);
         console.log(mountains);
-        for(var i = 0; i < mountains.length; i++){
+        for(let i = 0; i < mountains.length; i++){
 
-            var marker = new google.maps.Marker({
+            let marker = new google.maps.Marker({
             map: map,
             position: {lat: parseFloat(mountains[i].latitude), lng: parseFloat(mountains[i].longitude)}
-            
-            });          
+            });  
+
+            marker.addListener("click", function(){
+            var contentString = '<a href="/peaks/'+ mountains[i].id +' " >' + mountains[i].peak_name + '</a>';
+            // '/peaks</a>';
+            var infoWindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+          infoWindow.open(map, marker);
+        
+        });               
         } 
       });
   }
@@ -29,3 +39,4 @@ $(document).on("ready", function() {
 initMap();
          
  });
+

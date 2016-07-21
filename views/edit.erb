@@ -1,12 +1,12 @@
 
 <div class='container text-center'>
   <div class='row'>
-    <h1 id="edit_heading">Edit Peak Details</h1>
+    <h1 id="edit_heading">Edit Peak</h1>
   </div>
 </div>       
 
 
-<div class="container new_form">
+<div class="container edit_form">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <form class="form-horizontal" action='/peaks/<%= "#{@mountain.id}"%>' method="post">
@@ -15,56 +15,56 @@
   <div class="form-group">
       <label class="col-sm-3 control-label" for="mountain[peak_name]">Peak Name:</label>
     <div class="col-sm-6">
-      <input type="text"class="form-control" name="mountain[peak_name]">
+      <input type="text" value="<%= @mountain.peak_name %>" class="form-control" name="mountain[peak_name]">
     </div>
   </div>
 
   <div class="form-group">
       <label class="col-sm-3 control-label" for="mountain[range]">Mountain Range:</label>
     <div class="col-sm-6">
-      <input type="text" class="form-control" name="mountain[range]">
+      <input type="text" value="<%= @mountain.range %>" class="form-control" name="mountain[range]">
     </div>
   </div>
 
   <div class="form-group">
       <label class="col-sm-3 control-label" for="mountain[elevation]">Elevation:</label>
     <div class="col-sm-2">
-      <input type="number" class="form-control" name="mountain[elevation]">
+      <input type="number" value="<%= @mountain.elevation%>" class="form-control" name="mountain[elevation]">
     </div>
   </div>
 
   <div class="form-group">
       <label class="col-sm-3 control-label" for="mountain[ave_hike_time]">Average Hike Time:</label>
     <div class="col-sm-2">
-      <input type="number" class="form-control" name="mountain[elevation]">
+      <input type="number" value="<%= @mountain.ave_hike_time %>" class="form-control" name="mountain[ave_hike_time]">
     </div>
   </div>  
 
   <div class="form-group">
       <label class="col-sm-3 control-label" for="mountain[difficulty]">Difficulty:</label>
     <div class="col-sm-2">
-      <input type="number" class="form-control" name="mountain[difficulty]" placeholder= "1 through 10">
+      <input type="number" value="<%= @mountain.difficulty %>" class="form-control" name="mountain[difficulty]" placeholder= "1 - 10">
     </div>
   </div>  
 
    <div class="form-group">
       <label class="col-sm-3 control-label" for="mountain[distance]">Round-trip Milage:</label>
     <div class="col-sm-2">
-      <input type="number"class="form-control" name="mountain[distance]">
+      <input type="number" class="form-control" value="<%= @mountain.distance %>" name="mountain[distance]">
     </div>
   </div>  
 
   <div class="form-group">
       <label class="col-sm-3 control-label" for="mountain[latitude]">Latitude:</label>
     <div class="col-sm-2">
-      <input type="number" class="form-control" name="mountain[latitude]">
+      <input type="number" value="<%= @mountain.latitude %>" class="form-control" name="mountain[latitude]">
     </div>
   </div> 
 
   <div class="form-group"> 
      <label class="col-sm-3 control-label" for="mountain[longitude]">Longitude:</label>
     <div class="col-sm-2">
-      <input type="number" class="form-control" name="mountain[longitude]">
+      <input type="number" value="<%= @mountain.longitude %>"  class="form-control" name="mountain[longitude]">
     </div>
   </div> 
   
