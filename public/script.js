@@ -1,5 +1,6 @@
 $(document).on("ready", function() {
 
+
   function initMap() {
       var myLatLng = {lat: 38.829332, lng: -106.139515};
       // Create a map object and specify the DOM element for display.
@@ -35,8 +36,7 @@ $(document).on("ready", function() {
       });
   }
 
+initMap(); 
 
-initMap();
-         
- });
+});
 

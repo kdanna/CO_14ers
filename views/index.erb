@@ -1,26 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-<div class="container-fluid render_mountains">
-    <div class="row">
-    <% @mountains.each do |mountain| %>
-      <p>Peak Name: <%= mountain[:peak_name] %></p>
-			<p>Mountain Range: <%= mountain[:range] %></p>
-			<p>Elevation: <%= mountain[:elevation] %> feet</p>
-			<p>Avereage Hike Time: <%= mountain[:ave_hike_time] %></p>
-			<p>Difficulty: <%= mountain[:difficulty] %></p>
-			<p>Distance: <%= mountain[:distance] %></p>
-			
-			<form method="post" action="/peaks/<%= mountain.id %>">  
-    			<input name="_method" value="DELETE" type="hidden"/>
-   			 <button>Delete</button>
-  			</form>
+<div class="container">
+  <h2 class="text-center">All Peaks</h2>
+  <div class="panel-group" id="accordion">
+    <%@counter = 1%>
+    <%@mountains.each do |mountain| %>
+    <%@counter += 1%> 
+    <% p @counter %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><%= mountain[:peak_name] %></a>
+        </h4>
 
-  		<form method="get" action="/peaks/<%= mountain.id%>/edit">
-   			 <input type="submit" value="edit"></input>
-  		</form>
-   	
-			</br>
-     <%end%>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <p>Mountain Range: <%= mountain[:range] %></p>
+          <p>Elevation: <%= mountain[:elevation] %> feet</p>
+          <p>Avereage Hike Time: <%= mountain[:ave_hike_time] %></p>
+          <p>Difficulty: <%= mountain[:difficulty] %></p>
+          <p>Distance: <%= mountain[:distance] %></p>
+   
+          <form method="post" action="/peaks/<%= mountain.id %>">  
+              <input name="_method" value="DELETE" type="hidden"/>
+             <button>Delete</button>
+            </form>
+
+          <form method="get" action="/peaks/<%= mountain.id%>/edit">
+             <input type="submit" value="edit"></input>
+          </form>
+
+        </div>
+      </div>
     </div>
+  
+   <%end%>
+  </div>
 </div>
+    
+</body>
+</html>
+
 
 

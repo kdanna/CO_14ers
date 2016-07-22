@@ -1,5 +1,7 @@
 class Project < Sinatra::Base
 
+@@counter = 1
+
 set :method_override, true
 
 require 'json'
@@ -22,7 +24,7 @@ require 'json'
 
  #WORKS - INDEX - get all peaks
 	 get '/peaks' do
- 		@mountains = Mountain.all
+ 		@mountains = Mountain.all.order(:peak_name)
  		erb :index
  	end
 
