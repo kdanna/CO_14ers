@@ -9,13 +9,13 @@ require 'json'
     	erb :home
   	end
 
-  #NOT WORKING - get route for search
- #  	get '/search' do 
- #    	@picked_name = params[:peak_name]
- #    	p @picked_name
- #    	@peaks = Mountain.where("peak_name LIKE ?", "%#{@picked_name}%")
- #    	erb :home
-	# end
+  # NOT WORKING - get route for search
+  	get '/search' do 
+    	@picked_name = params[:peak_name]
+    	p @picked_name
+    	@mountains = Mountain.where("peak_name LIKE ?", "%#{@picked_name}%")
+    	erb :index
+	end
 
   #get map route
  	get '/map' do
