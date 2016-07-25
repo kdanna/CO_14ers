@@ -1,15 +1,21 @@
 class Project < Sinatra::Base
 
-@@counter = 1
-
 set :method_override, true
 
 require 'json'
   
-  # landing page
+  #landing page
  	get '/' do
     	erb :home
   	end
+
+  #NOT WORKING - get route for search
+ #  	get '/search' do 
+ #    	@picked_name = params[:peak_name]
+ #    	p @picked_name
+ #    	@peaks = Mountain.where("peak_name LIKE ?", "%#{@picked_name}%")
+ #    	erb :home
+	# end
 
   #get map route
  	get '/map' do

@@ -11,33 +11,34 @@
 <div class="container">
   <h2 class="text-center">All Peaks</h2>
   <div class="panel-group" id="accordion">
-    <%@counter = 1%>
     <%@mountains.each do |mountain| %>
-    <%@counter += 1%> 
-    <% p @counter %>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><%= mountain[:peak_name] %></a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%=mountain[:id]%>"><%= mountain[:peak_name] %></a>
         </h4>
 
       </div>
-      <div id="collapse1" class="panel-collapse collapse in">
+      <div id="collapse<%=mountain[:id]%>" class="panel-collapse collapse">
         <div class="panel-body">
           <p>Mountain Range: <%= mountain[:range] %></p>
           <p>Elevation: <%= mountain[:elevation] %> feet</p>
           <p>Avereage Hike Time: <%= mountain[:ave_hike_time] %></p>
           <p>Difficulty: <%= mountain[:difficulty] %></p>
           <p>Distance: <%= mountain[:distance] %></p>
-   
-          <form method="post" action="/peaks/<%= mountain.id %>">  
-              <input name="_method" value="DELETE" type="hidden"/>
-             <button>Delete</button>
+        
+          <div class="col-sm-12">
+            <form method="post" action="/peaks/<%= mountain.id %>">  
+                <input name="_method" value="DELETE" type="hidden"/>
+               <button class="btn btn-default">Delete</button>
             </form>
-
+          </div>
+          
+          <div class="col-sm-12">
           <form method="get" action="/peaks/<%= mountain.id%>/edit">
-             <input type="submit" value="edit"></input>
+             <input class="btn btn-default" type="submit" value="Edit"></input>
           </form>
+          </div>
 
         </div>
       </div>
